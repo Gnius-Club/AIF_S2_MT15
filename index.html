@@ -3,20 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Playbook Misión 15 : Creando tu Montaña Rusa Personalizada</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Playbook-S2-TM15</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <header>
-        <h1><span class="book-icon">📋</span> <strong>Playbook Misión 15 : Creando tu Montaña Rusa Personalizada</strong></h1>
+        <h1><span class="book-icon">📋</span> <strong>Playbook: Misión 15 - 2do Secundaria</strong></h1>
         <div class="header-widgets">
             <div class="timer-container">
-                <span id="timer">⏱️ 00:00</span>
-                <button id="startStop">Start</button>
-                <button id="reset">Reset</button>
+                <span id="global-timer">⏱️ 40:00</span>
+                <button id="global-start-stop">Start</button>
+                <button id="global-reset">Reset</button>
             </div>
             <div class="theme-toggle">
                 <i class="fas fa-sun"></i>
@@ -28,7 +27,6 @@
             </div>
         </div>
     </header>
-
     <div class="main-container">
         <aside class="activity-list">
             <h2>Actividades</h2>
@@ -40,248 +38,406 @@
                 <li><a href="#activity-4">4</a></li>
                 <li><a href="#activity-5">5</a></li>
             </ul>
-
-            <div class="sidebar-info">
-                <p>💡 Cada actividad está cuidadosamente diseñada para involucrar a los estudiantes.</p>
-                <p>⏱️ Se proporcionan estimaciones de tiempo para cada actividad para ayudarle a mantener el rumbo.</p>
-            </div>
         </aside>
-
         <main class="content">
             <div class="progress-bar">
                 <div class="progress"></div>
             </div>
-
-            <button id="toggle-dialogues">Mostrar todos los diálogos</button>
-
+            <!-- ACTIVIDAD 0: DE UN VISTAZO -->
             <div class="activity-card" id="activity-0">
-                <h2><span class="book-icon">📝</span> De un Vistazo: Misión Gnius</h2>
-                <p class="overview-subtitle">Resumen rápido de objetivos, materiales y preparación para el facilitador.</p>
-                <div class="overview-table-container">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th style="width: 50%;">Objetivos, Tácticas y Entregable</th>
-                                <th style="width: 50%;">Materiales Específicos y Preparación Previa</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <strong>Objetivos:</strong>
-                                    <ul>
-                                        <li>Aprender a crear recorridos de cámara definidos ('tours') en Delightex.</li>
-                                        <li>Comprender conceptualmente las NavMeshes y los algoritmos de Pathfinding (A*) que usa la IA para navegar.</li>
-                                        <li>Practicar el control del ritmo (pacing) de una experiencia cinemática.</li>
-                                    </ul>
-                                    <strong>Secuencia de Clase:</strong>
-                                    <ul>
-                                        <li><strong class="tactic-highlight">⚡Saludo Interactivo con IA:</strong> Contextualización de la cámara en movimiento.</li>
-                                        <li><strong class="tactic-highlight">⚡"I Can Statement" + Presentación del Desafío:</strong> Diferenciación entre tours fijos y navegación de IA.</li>
-                                        <li><strong class="tactic-highlight">⚡AI GYM:</strong> Adquisición conceptual de NavMeshes/Pathfinding y guía al tutorial técnico.</li>
-                                        <li><strong class="tactic-highlight">⚡Brain Spark:</strong> Aplicación práctica de la creación de tours en su escape room.</li>
-                                        <li><strong class="tactic-highlight">⚡Gnius STORM:</strong> Retroalimentación estructurada entre pares sobre la experiencia de ser guiado.</li>
-                                    </ul>
-                                    <strong>Entregable Clave:</strong>
-                                    <ul>
-                                        <li>Un tour de cámara funcional en su escenario de escape room, que guíe la vista del jugador a través de 4-5 puntos clave de forma cinematográfica (velocidad y suavizado ajustados).</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <strong>Materiales Específicos:</strong>
-                                    <ul>
-                                        <li>Proyector o pantalla interactiva.</li>
-                                        <li>Conexión a internet estable.</li>
-                                        <li>Acceso a Delightex con las escenas de la Misión 12.5 guardadas.</li>
-                                        <li>Chat "Agente Gnius" (Xolo) activo y funcionando.</li>
-                                        <li>Presentación de diapositivas (Diapositivas 1-11).</li>
-                                    </ul>
-                                    <strong>Preparación Previa para ESTA Sesión:</strong>
-                                    <ol>
-                                        <li><strong>Revisión de Misión (Interna):</strong>
-                                            <ul>
-                                                <li>Confirmar que el tutorial '8- Tours' está activo y funcional en Delightex.</li>
-                                                <li>Tener una comprensión clara de la analogía NavMesh/Pathfinding (mapa de calles y GPS) para reforzarla.</li>
-                                            </ul>
-                                        </li>
-                                        <li><strong>Familiarización:</strong> Prepararse para guiar una sesión que combina una habilidad técnica (crear tours) con un concepto de IA más abstracto (Pathfinding).</li>
-                                    </ol>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <h2><span class="book-icon">📝</span> De un Vistazo: Comando Central</h2>
+                <p class="overview-subtitle">Todo lo que necesitas para preparar y ejecutar esta misión en minutos.</p>
+                
+                <div class="command-section">
+                    <h3>🎯 Objetivo de Aprendizaje</h3>
+                    <div class="objective-box">
+                        <p><strong>Los estudiantes podrán:</strong> usar Delightex para la creación de tours, recorridos y control de cámara para diseñar caminos y comprender el funcionamiento de NavMeshes, pathfinding y navegación inteligente.</p>
+                    </div>
+                </div>
+                <div class="command-section xolo-prompt">
+                    <h3>🤖 Prompt de Referencia para XOLO (Solo para Maestro)</h3>
+                    <div class="prompt-box">
+                        <div class="prompt-header">
+                            <span class="prompt-label">⚠️ NOTA: XOLO ya conoce el tema de esta misión. Este prompt es SOLO de referencia en caso de emergencia técnica:</span>
+                            <button class="copy-btn" onclick="copyPrompt('main-prompt')">
+                                <i class="fas fa-copy"></i> Copiar
+                            </button>
+                        </div>
+                        <pre id="main-prompt">Explícame cómo los recorridos y caminos definidos influyen en la experiencia del usuario en VR. Guíame para entender qué son los NavMeshes y cómo los algoritmos de pathfinding permiten que NPCs sigan rutas de manera inteligente. Relaciona esto con el tutorial '8- Tours' y ayúdame a conectar el movimiento de cámara con principios reales de navegación en IA.</pre>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>⚡ Puntos Esenciales de la Misión</h3>
+                    <div class="essentials-grid">
+                        <div class="essential-card">
+                            <div class="essential-icon">🎓</div>
+                            <h4>Concepto Clave</h4>
+                            <p>Navegación Inteligente: Es como darle un mapa y un GPS a un personaje digital para que sepa cómo llegar de un punto A a un punto B sin chocar con paredes.</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">🔧</div>
+                            <h4>Habilidad Técnica</h4>
+                            <p>Usar Delightex para crear recorridos automáticos y controlar el movimiento de la cámara.</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">🧪</div>
+                            <h4>Experimentación</h4>
+                            <p>Probar con diferentes curvas y velocidades en los caminos para entender limitaciones de fluidez.</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">💬</div>
+                            <h4>Interacción con XOLO</h4>
+                            <p>XOLO ya conoce a cada estudiante y el tema de hoy. Solo abren el chat y comienzan a aprender. Tú guías el timing y motivación.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>📦 Checklist de Materiales</h3>
+                    <div class="materials-checklist">
+                        <label><input type="checkbox"> Proyector/pantalla + presentación (5 diapositivas)</label>
+                        <label><input type="checkbox"> Internet estable + Gnius Space con XOLO activo</label>
+                        <label><input type="checkbox"> Computadora o Tablet con navegador web (1 por cada 2 estudiantes)</label>
+                        <label><input type="checkbox"> Acceso a Delightex (https://edu.delightex.com/Auth) con cuenta activa</label>
+                        <label><input type="checkbox"> Guía del tutorial '8- Tours' disponible</label>
+                        <label><input type="checkbox"> ⚠️ Esta misión usa diseño de entornos y recorridos en Delightex</label>
+                        <label><input type="checkbox"> 📋 Para crear el tour: En Delightex → Escena → Añadir Tour → Definir puntos de paso</label>
+                    </div>
+                    <p class="care-reminder"><strong>🛡️ Cuidado del equipo:</strong> Mantener el equipo de cómputo en una superficie estable y cerrar pestañas del navegador que no se utilicen para mejorar el rendimiento de la VR.</p>
+                </div>
+                <div class="command-section">
+                    <h3>🗓️ Secuencia de la Misión (40 min)</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot">1</div>
+                            <div class="timeline-content">
+                                <strong>Intro a la Misión</strong>
+                                <span class="time-badge">2 min</span>
+                                <p>Bienvenida, I Can Statement y contexto de la misión.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">2</div>
+                            <div class="timeline-content">
+                                <strong>A.I. Gym</strong>
+                                <span class="time-badge">8 min</span>
+                                <p>Los estudiantes abren el chat con XOLO y aprenden sobre NavMeshes y navegación inteligente (sin prompt específico).</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">3</div>
+                            <div class="timeline-content">
+                                <strong>Brain Spark</strong>
+                                <span class="time-badge">20 min</span>
+                                <p>Idear, construir y experimentar un programa con XOLO.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">4</div>
+                            <div class="timeline-content">
+                                <strong>Gnius STORM - Compartir</strong>
+                                <span class="time-badge">5 min</span>
+                                <p>Demostración y reflexión en parejas.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">5</div>
+                            <div class="timeline-content">
+                                <strong>Entrega de Evidencias</strong>
+                                <span class="time-badge">5 min</span>
+                                <p>Subir capturas a Gnius Space y finalizar misión.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>🚨 Resolución Rápida de Problemas</h3>
+                    <div class="troubleshooting-list">
+                        <ul>
+                            <li><strong>Si los alumnos no pueden ingresar a Gnius Space:</strong> Activa XOLO SOS en <a href="https://xolo.gnius.club" target="_blank">xolo.gnius.club</a> para continuar la misión sin interrumpir la clase.</li>
+                            <li><strong>Si Delightex no carga:</strong> Refrescar la página y verificar que la cuenta esté activa.</li>
+                            <li><strong>Si la cámara se mueve de forma errática:</strong> Revisar los puntos de control del tour y asegurar que no haya ángulos imposibles.</li>
+                            <li><strong>Si hay errores en el diseño:</strong> Recordar a los estudiantes que XOLO puede ayudar a depurar. Pídeles que describan el comportamiento extraño a XOLO.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-
+            <!-- ACTIVIDAD 1: INTRO A LA MISIÓN -->
             <div class="activity-card" id="activity-1">
-                <h2>⚡ Actividad 1: Saludo de I.A. y Contexto de Misión ⏰ 3 minutos</h2>
-                <p>Establecer un ambiente de trabajo profesional y enmarcar la sesión como la dirección de la experiencia del jugador.</p>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 1: Bienvenida y Contexto ⏰ 1 minuto</h3>
-                            <p>(Proyectar Diapositiva 2) El facilitador da la bienvenida y presenta la misión: dirigir la mirada del jugador.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">"Desarrolladores. Han controlado la cámara como un punto de vista estático. Hoy, le darán movimiento. Se convertirán en directores de una 'montaña rusa' virtual. Aprenderán a programar recorridos de cámara automáticos, una técnica esencial para cinemáticas, introducciones de niveles o tours virtuales. Su misión es guiar la mirada del jugador a través de su mundo."</p>
-                            </div>
-                        </div>
+                <div class="activity-header">
+                    <h2>🚀 Actividad 1: Intro a la Misión</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 2:00</span>
+                        <button class="timer-start-btn" data-duration="120">Iniciar</button>
                     </div>
-                      <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 2: Activación de IA y Perfil ⏰ 2 minutos</h3>
-                            <p>El facilitador da la instrucción explícita a los alumnos para que saluden a Xolo en el chat.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">"Activen su sesión de trabajo para la Misión 15 siguiendo el protocolo estándar."</p>
-                            </div>
-                        </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Dar la bienvenida con energía.</li>
+                            <li>Pedir a los alumnos que ingresen a Gnius Space.</li>
+                            <li>Proyecta diapositiva 1 con el I Can Statement.</li>
+                            <li>Motiva: "¡Hoy le daremos movimiento inteligente a sus mundos virtuales!".</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <ul>
+                            <li>XOLO ya está listo y conoce a cada estudiante.</li>
+                            <li>Sabe que hoy toca aprender sobre NavMeshes y Pathfinding.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Escucha la misión del día.</li>
+                            <li>Loguearse en Gnius Space.</li>
+                            <li>Preparación para trabajar en parejas.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 1: I Can Statement</h4>
+                    <div class="slide-content">
+                        <p><strong>🎯 Hoy seré capaz de:</strong></p>
+                        <p class="highlight-text">🤖 A crear recorridos inteligentes para que los usuarios vivan experiencias inmersivas.</p>
+                        <p><strong>Aplicación real:</strong> Los desarrolladores de videojuegos y simuladores de entrenamiento usan NavMeshes para que los personajes se muevan de forma realista sin atravesar objetos.</p>
+                        <p><strong>Tu aliado:</strong> XOLO ya sabe qué vas a aprender hoy. ¡Solo abre el chat y comienza!</p>
                     </div>
                 </div>
             </div>
-
+            <!-- ACTIVIDAD 2: A.I. GYM -->
             <div class="activity-card" id="activity-2">
-                <h2>⚡ Actividad 2: "I Can Statement" y Presentación del Desafío ⏰ 7 minutos</h2>
-                <p>Clarificar las metas de aprendizaje, diferenciando entre un tour de cámara programado y la navegación autónoma de una IA.</p>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 1: El Desafío del Día ⏰ 4 minutos</h3>
-                            <p>(Proyectar Diapositiva 3) El facilitador introduce los 'tours' y los contrasta con la navegación de IA.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">"Vamos a aprender a crear 'tours', que son caminos predefinidos que la cámara seguirá automáticamente. Esto nos permite asegurar que el jugador vea exactamente lo que queremos que vea. Pero, como siempre, no solo aprenderemos la herramienta. Exploraremos cómo los personajes de IA en los juegos navegan estos mismos mundos, pero de forma autónoma y mucho más compleja."</p>
-                            </div>
-                        </div>
+                <div class="activity-header">
+                    <h2>🧠 Actividad 2: A.I. Gym</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 8:00</span>
+                        <button class="timer-start-btn" data-duration="480">Iniciar</button>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 2: Objetivo de Aprendizaje (I Can Statement) ⏰ 3 minutos</h3>
-                            <p>(Proyectar Diapositiva 4) El facilitador presenta el objetivo de aprendizaje concreto de la sesión.</p>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta diapositiva 2.</li>
+                            <li>Indica: "Abran el chat con XOLO y salúdenlo. Él ya sabe qué les va a enseñar hoy."</li>
+                            <li>Circula para asegurar que todos interactúan con XOLO.</li>
+                            <li>Si alguien tiene dudas, recuérdale: "Pregúntale a XOLO, él te puede explicar de otra forma".</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">✅ XOLO ACTIVO</p>
+                        <ul>
+                            <li>Reconoce al estudiante y sus preferencias de aprendizaje.</li>
+                            <li>Explica cómo funcionan los NavMeshes y el pathfinding en términos simples.</li>
+                            <li>Introduce el concepto de navegación inteligente en entornos 3D.</li>
+                            <li>Responde dudas sobre los conceptos.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Abrir el chat con XOLO y saludarlo.</li>
+                            <li>Aprender a usar Delightex para diseñar rutas de cámara.</li>
+                            <li>Aprender sobre cómo la IA calcula caminos óptimos.</li>
+                            <li>Despejar todas sus dudas preguntando a XOLO.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 2: A.I. GYM</h4>
+                    <div class="slide-content">
+                        <p><strong>💬 Abre el chat con XOLO y salúdalo:</strong></p>
+                        <div class="prompt-box">
+                            <pre>"¡Hola XOLO! Estoy listo para aprender."</pre>
                         </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">"Al finalizar esta sesión, podrán afirmar con seguridad: <strong>'Yo sé cómo crear un recorrido de cámara automático (tour) y puedo explicar conceptualmente qué son los NavMeshes y los algoritmos de Pathfinding que usan las IAs para navegar.'</strong>"</p>
-                            </div>
-                        </div>
+                        <p class="highlight-text" style="margin-top: 1rem;">✨ XOLO ya sabe quién eres y qué tema toca hoy. ¡Solo empieza a conversar!</p>
+                        <p class="highlight-text">🎯 Objetivo: Aprender a usar Delightex para crear tours y entender el pathfinding.</p>
+                    </div>
+                </div>
+                
+                <div class="optional-script">
+                    <button class="collapsible-button">📖 Ver guion detallado (opcional)</button>
+                    <div class="collapsible-content">
+                        <p class="dialogue assistant">Ahora vamos a sumergirnos en el mundo de la navegación inteligente. Abran su chat con XOLO y simplemente salúdenlo. XOLO ya los conoce y sabe exactamente qué les va a enseñar hoy sobre cómo los personajes y las cámaras se mueven en mundos virtuales. No necesitan escribir un prompt especial, solo empiecen a platicar con él. Pregúntenle sobre los NavMeshes y cómo el tutorial de Tours se conecta con la IA real. ¡Aprovechen para despejar todas sus dudas sobre cómo se crean esos caminos inteligentes!</p>
                     </div>
                 </div>
             </div>
-
+            <!-- ACTIVIDAD 3: BRAIN SPARK -->
             <div class="activity-card" id="activity-3">
-                <h2>⚡ Actividad 3: A.I. GYM ⏰ 10 minutos</h2>
-                <p>Guiar a los estudiantes para que aprendan los conceptos profesionales de navegación de IA y la técnica para crear tours.</p>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 1: Diálogo Conceptual con Xolo ⏰ 10 minutos</h3>
-                            <p>(Proyectar Diapositiva 5) El facilitador instruye a los estudiantes sobre cómo iniciar su diálogo de aprendizaje con Xolo.</p>
+                <div class="activity-header">
+                    <h2>💡 Actividad 3: Brain Spark</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 20:00</span>
+                        <button class="timer-start-btn" data-duration="1200">Iniciar</button>
+                    </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta la diapositiva 3.</li>
+                            <li>Indica: "Pidan a XOLO que los ayude a idear un proyecto. Cuando tengan su GCS, pásenlo a bloques en MakeCode, prueben en el simulador y luego con el hardware real".</li>
+                            <li>Entrega por parejas los Entornos VR conforme los alumnos prueben su GCS en el simulador.</li>
+                            <li>Si hay errores, recuerda: "Pregúntenle a XOLO, él los ayuda a depurar".</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">✅ XOLO ACTIVO</p>
+                        <ul>
+                            <li>Ayuda a desarrollar una idea y un VIBE que aplique recorridos inteligentes.</li>
+                            <li>Entrega el GCS de la idea del genio.</li>
+                            <li>Resuelve errores de sintaxis o lógica.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Trabajar con XOLO una idea y un VIBE para usar tours y caminos.</li>
+                            <li>Traducir el GCS de XOLO a bloques en MakeCode.</li>
+                            <li>Depurar su programa con XOLO si hay errores.</li>
+                            <li>Configurar el recorrido en Delightex y probar la fluidez.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 3: Brain Spark</h4>
+                    <div class="slide-content">
+                        <p><strong>1. 💬 Pide a XOLO que te ayude a crear:</strong></p>
+                        <div class="prompt-box">
+                            <pre>"Ayudame a diseñar un tour o recorrido tipo “montaña rusa” en Delightex VR. Dame una vibe (ej. “aventura extrema”, “viaje educativo”, “exploración futurista”) y guíame para definir el camino, las curvas y los puntos de interés. Después indícame cómo evaluar si el recorrido es fluido y coherente con la experiencia que quiero generar."</pre>
                         </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">"Iniciamos el A.I. GYM. Para dominar el movimiento de cámara y entender cómo lo hacen las IAs, consulten a su tutor. Díganle a Xolo: <strong>'Xolo, enséñame a crear tours de cámara en Delightex y explícame los conceptos profesionales de NavMesh y Pathfinding que usan las IAs.'</strong> Él les guiará al tutorial '8- Tours' para la parte técnica y luego les dará la visión conceptual de cómo lo hace una IA de forma dinámica."</p>
-                            </div>
-                        </div>
+                        <p style="margin-top: 1.5rem;"><strong>2. 🔬 Experimenta y descubre con tu programa:</strong></p>
+                        <ul>
+                            <li>¿El recorrido de la cámara es fluido y sin saltos bruscos?</li>
+                            <li>¿Qué pasa si colocas un obstáculo directamente en el camino definido?</li>
+                            <li>¿Funciona igual el recorrido si aumentas la velocidad al doble?</li>
+                            <li>¿Cómo ayudan los NavMeshes a que el recorrido sea coherente con el entorno y no atraviese paredes?</li>
+                            <li>¿En qué se diferencia un camino fijo de un algoritmo de pathfinding dinámico que esquiva objetos?</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="optional-script">
+                    <button class="collapsible-button">📖 Ver guion detallado (opcional)</button>
+                    <div class="collapsible-content">
+                        <p class="dialogue assistant">¡Es hora de crear su propia experiencia inmersiva! Vamos a pasar de la teoría a la práctica ideando un tour tipo montaña rusa. Primero, definan con XOLO el 'VIBE' de su proyecto, ya sea una aventura extrema o un viaje educativo. Una vez que tengan su plan, llévenlo a Delightex, configuren los puntos de interés y tracen el camino. Por ejemplo, podrían hacer un viaje por el sistema solar donde la cámara navega inteligentemente entre planetas. No olviden probar su recorrido y hacerse las preguntas de experimentación. Si tienen errores o dudas sobre cómo ajustar una curva, pregúntenle a XOLO, él los ayudará a depurar su diseño.</p>
+                    </div>
+                </div>
+                <div class="challenge-prompt">
+                    <h4>🚀 Prompt de Desafío (para quienes terminen rápido)</h4>
+                    <div class="prompt-box">
+                        <p><strong>Si ya experimentaste con todo, pregunta a XOLO:</strong></p>
+                        <p class="challenge-text">"Ya probé con un recorrido básico. ¿Puedes enseñarme cómo hacer que mi cámara reaccione a eventos o cambie de ruta según la interacción del usuario?"</p>
                     </div>
                 </div>
             </div>
-
+            <!-- ACTIVIDAD 4: GNIUS STORM - COMPARTIR -->
             <div class="activity-card" id="activity-4">
-                 <h2>⚡ Actividad 4: Brain Spark ⏰ 15 minutos</h2>
-                <p>Supervisar el workflow de completar el tutorial y crear un tour de introducción en la escape room.</p>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 1: Ejecución del Tutorial ⏰ 5 minutos</h3>
-                            <p>(Proyectar Diapositiva 7) Los estudiantes completan el tutorial '8- Tours' en Delightex.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">"Ahora, al Brain Spark. Tienen 5 minutos para la parte técnica. Completen el tutorial '8- Tours' que les indicó Xolo. El objetivo es aprender a crear un 'path' y asociar la cámara a él."</p>
-                            </div>
-                        </div>
+                <div class="activity-header">
+                    <h2>⚡ Actividad 4: Gnius STORM - Compartir y Reflexionar</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 5:00</span>
+                        <button class="timer-start-btn" data-duration="300">Iniciar</button>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 2: El Tour de la Escape Room (Mini-Proyecto) ⏰ 10 minutos</h3>
-                            <p>(Proyectar Diapositiva 8) Los equipos diseñan e implementan un tour introductorio en su escenario.</p>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Organiza las parejas para compartir.</li>
+                            <li>Gestiona los tiempos: 2 min demo + 2 min reflexión + 1 min cierre.</li>
+                            <li>Facilita retroalimentación constructiva.</li>
+                            <li>Cierra con reflexión sobre aplicaciones reales.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">⏸️ XOLO EN ESPERA</p>
+                        <ul>
+                            <li>Disponible solo si hay dudas finales urgentes.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Demuestra su programa funcionando a otra pareja.</li>
+                            <li>Explica qué puntos de interés y caminos funcionan bien.</li>
+                            <li>Comparte un descubrimiento interesante.</li>
+                            <li>Da retroalimentación positiva al compañero.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 4: Think-Pair-Share</h4>
+                    <div class="slide-content tps-structure">
+                        <div class="tps-phase">
+                            <h4>🤔 THINK (30 seg)</h4>
+                            <p>Reflexión individual: ¿Qué curvas o puntos de interés navega mejor tu cámara? ¿Qué te sorprendió del movimiento?</p>
                         </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                 <p class="dialogue assistant">"Herramienta dominada. Ahora, a la dirección. Usando su escenario de escape room, creen un tour de introducción. El recorrido debe empezar en la puerta, sobrevolar la habitación para mostrar la disposición general y terminar enfocando el primer puzzle. Esto es una técnica clásica de diseño de niveles. Definan 4-5 puntos y programen el tour. Si el ritmo no es el adecuado, consulten a Xolo sobre cómo ajustar la velocidad y el suavizado ('easing') para un resultado más cinematográfico."</p>
-                            </div>
+                        <div class="tps-phase">
+                            <h4>👥 PAIR (2 min)</h4>
+                            <p>Con otra pareja: Demuestren su programa y expliquen su experiencia</p>
+                            <p class="highlight-text">Frase guía: "Mi cámara navega por un entorno de aventura extrema. Me sorprendió que el pathfinding evitara los obstáculos tan suavemente."</p>
+                        </div>
+                        <div class="tps-phase">
+                            <h4>💬 SHARE (2 min)</h4>
+                            <p>Retroalimentación mutua y cierre del maestro.</p>
                         </div>
                     </div>
                 </div>
             </div>
-
+            <!-- ACTIVIDAD 5: ENTREGA DE EVIDENCIAS -->
             <div class="activity-card" id="activity-5">
-                <h2>⚡ Actividad 5: Gnius STORM ⏰ 5 minutos</h2>
-                <p>Moderar la demostración de los tours y la retroalimentación sobre la experiencia de una narrativa guiada.</p>
-                <div class="steps">
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 1: Think (Reflexión Individual) ⏰ 1 minuto</h3>
-                            <p>(Proyectar Diapositiva 9) El facilitador guía una breve reflexión sobre la diferencia entre ser guiado y explorar libremente.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">"Tiempo. Reflexión individual. Piensen en el tour que crearon. ¿Qué elementos clave de su escena decidieron mostrar y por qué? ¿Cómo cambia la experiencia del jugador al ser guiado por una 'montaña rusa' visual en lugar de explorar libremente?"</p>
-                            </div>
-                        </div>
+                <div class="activity-header">
+                    <h2>✅ Actividad 5: Entrega de Evidencias</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 5:00</span>
+                        <button class="timer-start-btn" data-duration="300">Iniciar</button>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 2: Pair (Intercambio en Parejas) ⏰ 2 minutos</h3>
-                            <p>(Proyectar Diapositiva 10) En parejas, los estudiantes presentan su tour y explican sus decisiones de dirección.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">"En parejas. Presenten su tour de introducción. Mientras se reproduce, expliquen por qué eligieron mostrar esos elementos específicos en ese orden. El compañero experimenta el tour y prepara su feedback. Luego, intercambien roles."</p>
-                            </div>
-                        </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta diapositiva 5 con las instrucciones.</li>
+                            <li>Guía a los estudiantes para tomar las capturas.</li>
+                            <li>Asegura que todos suban sus evidencias a Gnius Space.</li>
+                            <li>Felicita al grupo por completar la misión.</li>
+                        </ul>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 3: Share (Retroalimentación Estructurada) ⏰ 1 minuto</h3>
-                            <p>El facilitador provee una estructura para que el feedback se centre en la efectividad del tour.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">"Para dar feedback, usen esta estructura: <strong>1. 'Tu tour me orientó eficazmente porque...' 2. 'La decisión de enfocar [elemento] al final es inteligente porque...' 3. 'Una pregunta que tengo sobre el ritmo de la cámara es...'</strong>"</p>
-                            </div>
-                        </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">⭕ XOLO FINALIZADO</p>
+                        <ul>
+                            <li>La interacción con XOLO ha terminado para esta misión.</li>
+                        </ul>
                     </div>
-                    <div class="step-card">
-                        <div class="step-content">
-                            <h3>Paso 4: Síntesis y Cierre ⏰ 1 minuto</h3>
-                            <p>(Proyectar Diapositiva 11) El facilitador concluye la sesión, consolidando la habilidad de dirigir la atención del jugador.</p>
-                        </div>
-                        <div class="collapsible">
-                            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-                            <div class="collapsible-content">
-                                <p class="dialogue assistant">"Han aprendido a dirigir la atención, una de las habilidades más importantes de un diseñador. Entienden la diferencia fundamental entre un camino fijo y la navegación inteligente de una IA. Este concepto será clave a medida que diseñen experiencias más complejas. La próxima sesión, nos enfocaremos en el arte del playtesting. Buen trabajo."</p>
-                            </div>
-                        </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Tomar screenshot de su código en MakeCode.</li>
+                            <li>Tomar screenshot de su conversación con XOLO.</li>
+                            <li>Subir ambas evidencias a Gnius Space.</li>
+                            <li>Dar click en "Finalizar Misión".</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 5: ¡Misión Cumplida!</h4>
+                    <div class="slide-content">
+                        <p><strong>📸 Para terminar, sube tus evidencias a Gnius Space:</strong></p>
+                        <ol>
+                            <li>Una captura de pantalla de tu programa final en <strong>MakeCode</strong>.</li>
+                            <li>Una captura de pantalla de tu conversación con <strong>XOLO</strong> donde te dio tu GCS.</li>
+                        </ol>
+                        <p class="highlight-text" style="margin-top: 1rem;">¡No olvides dar click en el botón <strong>"Finalizar Misión"</strong> cuando termines!</p>
                     </div>
                 </div>
             </div>
         </main>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
